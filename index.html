@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Aisyah!</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffdde1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Header Styles */
+        h1 {
+            font-size: 3rem;
+            color: #ff6699;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .message {
+            font-size: 1.5rem;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        /* Button Styles */
+        button {
+            padding: 0.8rem 2rem;
+            font-size: 1.2rem;
+            color: white;
+            background-color: #ff6699;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            outline: none;
+        }
+
+        button:hover {
+            background-color: #cc3366;
+        }
+
+        /* Sections Styles */
+        .section {
+            display: none;
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            animation: slideIn 1s ease-out;
+            overflow-y: auto; /* Added for scrollable content */
+            max-height: 70vh; /* Added max-height to limit scrolling */
+        }
+
+        @keyframes slideIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .section h2 {
+            color: #ff6699;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            font-size: 1.2rem;
+            color: #333;
+            margin: 1rem 0;
+            line-height: 1.6;
+        }
+
+        /* Canvas Styles */
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 90%;
+            height: 90%;
+            pointer-events: none;
+            z-index: -3;
+        }
+
+	#birthdayVideo {
+   	 max-width: 100%;
+    	height: auto;
+	}
+
+        /* Media Queries */
+        @media only screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            .section {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday, Aisyah! 🎉</h1>
+        <p class="message">Wishing you a day filled with love, laughter, and all the happiness in the world. May your dreams continue to shine brighter each day! ❤️</p>
+        <button id="confettiButton">Throw Confetti! 🎊</button>
+    </div>
+
+    <div class="section" id="wishCardSection">
+        <h2>Birthday Wishes 🌟</h2>
+        <p>Hello.. Hello… I’m finally back with my sweet personality~</p>
+        <p>Here i would like to wish a Happy birthday to my fav precious soul, ‘Aisyah!! 😚🫶🏼</p>
+        <p>You’re officially 23 now! Time surely flies so fast and i’m so grateful to have you in my life. You’ve always been such a precious and beautiful soul, inside and out. Your kindness, strength and positivity always inspire me every day. I hope everything goes well and you’re always in a good shape of health 🥺❤️</p>
+        <p>I also noticed that we have been out of touch lately, yea probably due to our own commitments, but I can see that our friendship is still there!! And i feel so bad for not being able to accompany you during treasure and dreamies concert. We’ve been looking forward to those moments, but i swear it breaks my heart that we haven’t been able to share them. Hopefully, later when i have my own salary, we will make up for it. We definitely gonna attend all those concerts together sampai bank aku pun merayu kat aku suruh stop 😂</p>
+        <p>Also, i couldn’t thank you enough for everything you’ve done for me both small or big one!! 🫧 thank you for always be there in every chapters of my life. I pray that your mental health will keep on improving day by day to the point that you no longer afraid of what others would say about you 🤚🏼 live freely cause you’re the main character of your life!!  Also, thank you for being born and always listening to my stupid rants 😭🫶🏼 Thank you for providing me a safe space, for having my back and reaching out your hands when things are too tough for me to handle 🥺🫧 I swear you helped me a lot 🙌🏼 You also deserve all the comfort and convenience as you embark ok this new chapter of your life ❤️</p>
+        <p>I wish you the best in everything you do, especially with your upcoming posting! 😊 I really hope you get posted dekat dengan rumah so you can be close to your loved ones and enjoy all the kemudahan dekat area tu. And, I believe that you’re going to be an amazing teacher!! Your students will be so lucky to have someone as caring, wise and dedicated as you ☀ i can already see the positive impact you’re going to make in their lives!! I hope you can be a teacher that students find peace whenever you’re around! And i know that you have so much to offer for your students 🤗 i know you have the ability to inspire them just like you’ve always done for me!!!</p>
+	<p>So, on this special day, i want you to celebrate yourself and all that you’ve accomplished!! I will always so proud of you in whatever you did!! You too have come so far, and there’s so much more greatness ahead of you!! 🥰 Do enjoy your day to the fullest, surrounded by those who love and appreciate you!! 😘🫧 inshaAllah, later kita jumpa okay!! Cuti sem aku panjang tau kalini, nanti kita set the date and day, kita keluar okies!! 😚🫶🏼 See you when i see you!! Love you 🫧</p>
+    </div>
+
+<div class="section" id="videoSection">
+    <h2>Special Birthday Video 🎥</h2>
+    <video id="birthdayVideo" controls>
+        <source src="video/aisyah.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+    <canvas id="confettiCanvas"></canvas>
+    <canvas id="cakeCanvas"></canvas>
+
+    <audio id="backgroundMusic" loop autoplay>
+        <source src="song/svt.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        const button = document.getElementById('confettiButton');
+        const confettiCanvas = document.getElementById('confettiCanvas');
+        const confettiContext = confettiCanvas.getContext('2d');
+        const cakeCanvas = document.getElementById('cakeCanvas');
+        const cakeContext = cakeCanvas.getContext('2d');
+        const sections = document.querySelectorAll('.section');
+        const backgroundMusic = document.getElementById('backgroundMusic');
+        const birthdayVideo = document.getElementById('birthdayVideo');
+
+
+        confettiCanvas.width = window.innerWidth;
+        confettiCanvas.height = window.innerHeight;
+        cakeCanvas.width = window.innerWidth;
+        cakeCanvas.height = window.innerHeight;
+
+        let confettiArray = [];
+        let cakeArray = [];
+
+        button.addEventListener('click', () => {
+            sections.forEach(section => section.style.display = 'block'); // Show all sections
+            createConfetti();
+            createCakes();
+            animateConfettiAndCakes();
+            playBackgroundMusic();
+        });
+
+        // Pause background music when video starts playing
+        birthdayVideo.addEventListener('play', () => {
+            pauseBackgroundMusic();
+        });
+
+        // Resume background music when video pauses
+        birthdayVideo.addEventListener('pause', () => {
+            playBackgroundMusic();
+        });
+
+        // Resume background music when video ends
+        birthdayVideo.addEventListener('ended', () => {
+            playBackgroundMusic();
+        });
+
+        function createConfetti() {
+            confettiArray = [];
+            for (let i = 0; i < 100; i++) {
+                confettiArray.push({
+                    x: Math.random() * confettiCanvas.width,
+                    y: Math.random() * confettiCanvas.height - confettiCanvas.height,
+                    r: Math.random() * 6 + 4,
+                    d: Math.random() * 20 + 15,
+                    color: `hsl(${Math.random() * 360}, 100%, 50%)`,
+                    tilt: Math.random() * 10 - 10,
+                    tiltAngleIncrement: Math.random() * 0.07 + 0.05,
+                    tiltAngle: 0
+                });
+            }
+        }
+
+        function createCakes() {
+            cakeArray = [];
+            for (let i = 0; i < 5; i++) {
+                cakeArray.push({
+                    x: Math.random() * cakeCanvas.width,
+                    y: cakeCanvas.height + Math.random() * cakeCanvas.height,
+                    size: Math.random() * 60 + 60,
+                    color: `hsl(${Math.random() * 360}, 70%, 60%)`,
+                    speed: Math.random() * 3 + 1
+                });
+            }
+        }
+
+        function drawConfetti() {
+            confettiContext.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+            confettiArray.forEach((confetti, index) => {
+                confetti.tiltAngle += confetti.tiltAngleIncrement;
+                confetti.y += (Math.cos(confetti.d) + 1 + confetti.r / 2) / 2;
+                confetti.tilt = Math.sin(confetti.tiltAngle - index / 3) * 15;
+
+                if (confetti.y > confettiCanvas.height) {
+                    confettiArray[index] = {
+                        x: Math.random() * confettiCanvas.width,
+                        y: -confettiCanvas.height,
+                        r: confetti.r,
+                        d: confetti.d,
+                        color: confetti.color,
+                        tilt: confetti.tilt,
+                        tiltAngleIncrement: confetti.tiltAngleIncrement,
+                        tiltAngle: confetti.tiltAngle
+                    };
+                }
+
+                confettiContext.beginPath();
+                confettiContext.lineWidth = confetti.r / 2;
+                confettiContext.strokeStyle = confetti.color;
+                confettiContext.moveTo(confetti.x + confetti.tilt + confetti.r / 4, confetti.y);
+                confettiContext.lineTo(confetti.x + confetti.tilt, confetti.y + confetti.tilt + confetti.r / 4);
+                confettiContext.stroke();
+            });
+        }
+
+        function drawCakes() {
+            cakeContext.clearRect(0, 0, cakeCanvas.width, cakeCanvas.height);
+            cakeArray.forEach((cake, index) => {
+                cake.y -= cake.speed;
+
+                if (cake.y < -cake.size) {
+                    cakeArray[index] = {
+                        x: Math.random() * cakeCanvas.width,
+                        y: cakeCanvas.height + Math.random() * cakeCanvas.height,
+                        size: cake.size,
+                        color: cake.color,
+                        speed: Math.random() * 3 + 1
+                    };
+                }
+
+                cakeContext.beginPath();
+                cakeContext.arc(cake.x, cake.y, cake.size, 0, Math.PI * 2);
+                cakeContext.fillStyle = cake.color;
+                cakeContext.fill();
+            });
+        }
+
+        function animateConfettiAndCakes() {
+            drawConfetti();
+            drawCakes();
+            requestAnimationFrame(animateConfettiAndCakes);
+        }
+
+        function playBackgroundMusic() {
+            if (backgroundMusic.paused) {
+                backgroundMusic.play();
+            }
+        }
+
+        function pauseBackgroundMusic() {
+            if (!backgroundMusic.paused) {
+                backgroundMusic.pause();
+            }
+        }
+
+        // Adjust canvas size on window resize
+        window.addEventListener('resize', () => {
+            confettiCanvas.width = window.innerWidth;
+            confettiCanvas.height = window.innerHeight;
+            cakeCanvas.width = window.innerWidth;
+            cakeCanvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+</html>
