@@ -28,12 +28,18 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
             animation: fadeIn 1s ease-out;
+	    margin-bottom: 1rem;
         }
 
         @keyframes fadeIn {
             0% { opacity: 0; transform: translateY(-20px); }
             100% { opacity: 1; transform: translateY(0); }
         }
+
+	@keyframes slideIn {
+  	0% { opacity: 0; transform: translateY(20px); }
+    	100% { opacity: 1; transform: translateY(0); }
+	}
 
         /* Header Styles */
         h1 {
@@ -84,6 +90,7 @@
             animation: slideIn 1s ease-out;
             overflow-y: auto; /* Added for scrollable content */
             max-height: 70vh; /* Added max-height to limit scrolling */
+	    margin-bottom: 1rem;
         }
 
         @keyframes slideIn {
@@ -122,7 +129,8 @@
 
         /* Media Queries */
         @media only screen and (max-width: 768px) {
-            .container {
+            .container,
+	    .section {
                 width: 90%;
                 padding: 1.5rem;
             }
@@ -151,7 +159,8 @@
         }
 
         @media only screen and (max-width: 425px) {
-            .container {
+            .container,
+	    .section {
                 width: 90%;
                 padding: 1rem;
             }
