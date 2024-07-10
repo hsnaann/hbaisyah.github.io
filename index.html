@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Happy Birthday, Aisyah!</title>
     <style>
         /* General Styles */
@@ -14,9 +14,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
+            height: 100vh;
             min-height: 100vh;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            overflow-x: hidden;
         }
 
         .container {
@@ -28,7 +28,6 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
             animation: fadeIn 1s ease-out;
-            margin-bottom: 20px; /* Add margin bottom for better spacing */
         }
 
         @keyframes fadeIn {
@@ -36,23 +35,25 @@
             100% { opacity: 1; transform: translateY(0); }
         }
 
+        /* Header Styles */
         h1 {
-            font-size: 2.5rem; /* Adjusted for smaller screens */
+            font-size: 3rem;
             color: #ff6699;
             margin-bottom: 1rem;
             font-weight: bold;
         }
 
         .message {
-            font-size: 1rem; /* Adjusted for smaller screens */
+            font-size: 1.5rem;
             color: #333;
-            line-height: 1.4; /* Adjusted for readability on smaller screens */
+            line-height: 1.6;
             margin-bottom: 2rem;
         }
 
+        /* Button Styles */
         button {
-            padding: 0.6rem 1.5rem; /* Adjusted for smaller screens */
-            font-size: 1rem; /* Adjusted for smaller screens */
+            padding: 0.8rem 2rem;
+            font-size: 1.2rem;
             color: white;
             background-color: #ff6699;
             border: none;
@@ -67,6 +68,7 @@
             background-color: #cc3366;
         }
 
+        /* Sections Styles */
         .section {
             display: none;
             width: 90%;
@@ -91,23 +93,24 @@
 
         .section h2 {
             color: #ff6699;
-            font-size: 1.5rem; /* Adjusted for smaller screens */
+            font-size: 2.5rem;
             margin-bottom: 1rem;
         }
 
         .section p {
-            font-size: 1rem; /* Adjusted for smaller screens */
+            font-size: 1.2rem;
             color: #333;
             margin: 1rem 0;
-            line-height: 1.4; /* Adjusted for readability on smaller screens */
+            line-height: 1.6;
         }
 
+        /* Canvas Styles */
         canvas {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100vw; /* Full viewport width */
-            height: 100vh; /* Full viewport height */
+            width: 100%;
+            height: 100%;
             pointer-events: none;
             z-index: -1;
         }
@@ -120,59 +123,59 @@
         /* Media Queries */
         @media only screen and (max-width: 768px) {
             .container {
-                width: 95%; /* Slightly increase the width for smaller screens */
-                padding: 1rem; /* Reduce padding for smaller screens */
+                width: 90%;
+                padding: 1.5rem;
             }
 
             .section {
-                width: 95%; /* Slightly increase the width for smaller screens */
-                padding: 1rem; /* Reduce padding for smaller screens */
+                width: 90%;
+                padding: 1.5rem;
             }
 
             h1 {
-                font-size: 2rem; /* Reduce font size for smaller screens */
+                font-size: 2.5rem;
+            }
+
+            .message {
+                font-size: 1.2rem;
+                line-height: 1.4;
             }
 
             .section h2 {
-                font-size: 1.25rem; /* Reduce font size for smaller screens */
+                font-size: 2rem;
             }
 
-            .message, .section p {
-                font-size: 0.9rem; /* Reduce font size for smaller screens */
-            }
-
-            button {
-                padding: 0.5rem 1.2rem; /* Adjust padding for smaller screens */
-                font-size: 0.9rem; /* Adjust font size for smaller screens */
+            .section p {
+                font-size: 1rem;
             }
         }
 
         @media only screen and (max-width: 425px) {
             .container {
-                width: 100%;
+                width: 90%;
                 padding: 1rem;
             }
 
             .section {
-                width: 100%;
+                width: 90%;
                 padding: 1rem;
             }
 
             h1 {
-                font-size: 1.8rem; /* Reduce font size further for smaller screens */
+                font-size: 2rem;
+            }
+
+            .message {
+                font-size: 1rem;
+                line-height: 1.2;
             }
 
             .section h2 {
-                font-size: 1.2rem; /* Reduce font size further for smaller screens */
+                font-size: 1.5rem;
             }
 
-            .message, .section p {
-                font-size: 0.85rem; /* Reduce font size further for smaller screens */
-            }
-
-            button {
-                padding: 0.4rem 1rem; /* Adjust padding for smaller screens */
-                font-size: 0.85rem; /* Adjust font size for smaller screens */
+            .section p {
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -212,7 +215,7 @@
     </audio>
 
     <script>
-         const button = document.getElementById('confettiButton');
+        const button = document.getElementById('confettiButton');
         const confettiCanvas = document.getElementById('confettiCanvas');
         const confettiContext = confettiCanvas.getContext('2d');
         const cakeCanvas = document.getElementById('cakeCanvas');
