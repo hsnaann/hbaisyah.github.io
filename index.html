@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Happy Birthday, Aisyah!</title>
     <style>
         /* General Styles */
@@ -15,12 +15,13 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            min-height: 100vh;
             overflow-x: hidden;
         }
 
         .container {
-            width: 80%;
-            max-width: 800px;
+            width: 90%;
+            max-width: 500px;
             background: rgba(255, 255, 255, 0.9);
             padding: 2rem;
             border-radius: 15px;
@@ -70,8 +71,8 @@
         /* Sections Styles */
         .section {
             display: none;
-            width: 80%;
-            max-width: 800px;
+            width: 90%;
+            max-width: 500px;
             margin: 20px auto;
             background: rgba(255, 255, 255, 0.9);
             padding: 2rem;
@@ -81,8 +82,8 @@
             position: relative;
             z-index: 1;
             animation: slideIn 1s ease-out;
-            overflow-y: auto;
-            max-height: 70vh;
+            overflow-y: auto; /* Added for scrollable content */
+            max-height: 70vh; /* Added max-height to limit scrolling */
         }
 
         @keyframes slideIn {
@@ -119,12 +120,45 @@
             height: auto;
         }
 
-        /* Media Queries for Mobile Devices */
+        /* Media Queries */
         @media only screen and (max-width: 768px) {
-            .container, .section {
+            .container {
                 width: 90%;
                 padding: 1.5rem;
-                max-width: 90%;
+            }
+
+            .section {
+                width: 90%;
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .message {
+                font-size: 1.2rem;
+                line-height: 1.4;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .section p {
+                font-size: 1rem;
+            }
+        }
+
+        @media only screen and (max-width: 425px) {
+            .container {
+                width: 90%;
+                padding: 1rem;
+            }
+
+            .section {
+                width: 90%;
+                padding: 1rem;
             }
 
             h1 {
@@ -133,7 +167,7 @@
 
             .message {
                 font-size: 1rem;
-                line-height: 1.4;
+                line-height: 1.2;
             }
 
             .section h2 {
@@ -142,11 +176,6 @@
 
             .section p {
                 font-size: 0.9rem;
-            }
-
-            #birthdayVideo {
-                width: 100%;
-                height: auto;
             }
         }
     </style>
@@ -194,6 +223,11 @@
         const sections = document.querySelectorAll('.section');
         const backgroundMusic = document.getElementById('backgroundMusic');
         const birthdayVideo = document.getElementById('birthdayVideo');
+
+        confettiCanvas.width = window.innerWidth;
+        confettiCanvas.height = window.innerHeight;
+        cakeCanvas.width = window.innerWidth;
+        cakeCanvas.height = window.innerHeight;
 
         let confettiArray = [];
         let cakeArray = [];
@@ -326,14 +360,6 @@
             cakeCanvas.width = window.innerWidth;
             cakeCanvas.height = window.innerHeight;
         });
-
-        // Initialize canvas sizes
-        window.onload = () => {
-            confettiCanvas.width = window.innerWidth;
-            confettiCanvas.height = window.innerHeight;
-            cakeCanvas.width = window.innerWidth;
-            cakeCanvas.height = window.innerHeight;
-        };
     </script>
 </body>
 </html>
