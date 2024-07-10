@@ -14,6 +14,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             min-height: 100vh;
             overflow-x: hidden; /* Prevent horizontal scrolling */
         }
@@ -119,11 +120,59 @@
         /* Media Queries */
         @media only screen and (max-width: 768px) {
             .container {
-                width: 90%;
+                width: 95%; /* Slightly increase the width for smaller screens */
+                padding: 1rem; /* Reduce padding for smaller screens */
             }
 
             .section {
-                width: 90%;
+                width: 95%; /* Slightly increase the width for smaller screens */
+                padding: 1rem; /* Reduce padding for smaller screens */
+            }
+
+            h1 {
+                font-size: 2rem; /* Reduce font size for smaller screens */
+            }
+
+            .section h2 {
+                font-size: 1.25rem; /* Reduce font size for smaller screens */
+            }
+
+            .message, .section p {
+                font-size: 0.9rem; /* Reduce font size for smaller screens */
+            }
+
+            button {
+                padding: 0.5rem 1.2rem; /* Adjust padding for smaller screens */
+                font-size: 0.9rem; /* Adjust font size for smaller screens */
+            }
+        }
+
+        @media only screen and (max-width: 425px) {
+            .container {
+                width: 100%;
+                padding: 1rem;
+            }
+
+            .section {
+                width: 100%;
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.8rem; /* Reduce font size further for smaller screens */
+            }
+
+            .section h2 {
+                font-size: 1.2rem; /* Reduce font size further for smaller screens */
+            }
+
+            .message, .section p {
+                font-size: 0.85rem; /* Reduce font size further for smaller screens */
+            }
+
+            button {
+                padding: 0.4rem 1rem; /* Adjust padding for smaller screens */
+                font-size: 0.85rem; /* Adjust font size for smaller screens */
             }
         }
     </style>
@@ -163,7 +212,7 @@
     </audio>
 
     <script>
-        const button = document.getElementById('confettiButton');
+         const button = document.getElementById('confettiButton');
         const confettiCanvas = document.getElementById('confettiCanvas');
         const confettiContext = confettiCanvas.getContext('2d');
         const cakeCanvas = document.getElementById('cakeCanvas');
@@ -171,7 +220,6 @@
         const sections = document.querySelectorAll('.section');
         const backgroundMusic = document.getElementById('backgroundMusic');
         const birthdayVideo = document.getElementById('birthdayVideo');
-
 
         confettiCanvas.width = window.innerWidth;
         confettiCanvas.height = window.innerHeight;
@@ -203,10 +251,7 @@
         birthdayVideo.addEventListener('ended', () => {
             playBackgroundMusic();
         });
-        document.getElementById('confettiButton').addEventListener('click', function() {
-            document.getElementById('wishCardSection').style.display = 'block';
-            document.getElementById('videoSection').style.display = 'block';
-        });
+
         function createConfetti() {
             confettiArray = [];
             for (let i = 0; i < 100; i++) {
