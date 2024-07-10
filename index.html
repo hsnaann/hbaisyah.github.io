@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Happy Birthday, Aisyah!</title>
     <style>
         /* General Styles */
@@ -28,7 +28,6 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
             animation: fadeIn 1s ease-out;
-	    margin-bottom: 1rem;
         }
 
         @keyframes fadeIn {
@@ -36,12 +35,6 @@
             100% { opacity: 1; transform: translateY(0); }
         }
 
-	@keyframes slideIn {
-  	0% { opacity: 0; transform: translateY(20px); }
-    	100% { opacity: 1; transform: translateY(0); }
-	}
-
-        /* Header Styles */
         h1 {
             font-size: 3rem;
             color: #ff6699;
@@ -56,7 +49,6 @@
             margin-bottom: 2rem;
         }
 
-        /* Button Styles */
         button {
             padding: 0.8rem 2rem;
             font-size: 1.2rem;
@@ -74,7 +66,6 @@
             background-color: #cc3366;
         }
 
-        /* Sections Styles */
         .section {
             display: none;
             width: 90%;
@@ -90,7 +81,6 @@
             animation: slideIn 1s ease-out;
             overflow-y: auto; /* Added for scrollable content */
             max-height: 70vh; /* Added max-height to limit scrolling */
-	    margin-bottom: 1rem;
         }
 
         @keyframes slideIn {
@@ -111,7 +101,6 @@
             line-height: 1.6;
         }
 
-        /* Canvas Styles */
         canvas {
             position: fixed;
             top: 0;
@@ -129,8 +118,7 @@
 
         /* Media Queries */
         @media only screen and (max-width: 768px) {
-            .container,
-	    .section {
+            .container {
                 width: 90%;
                 padding: 1.5rem;
             }
@@ -159,8 +147,7 @@
         }
 
         @media only screen and (max-width: 425px) {
-            .container,
-	    .section {
+            .container {
                 width: 90%;
                 padding: 1rem;
             }
@@ -204,7 +191,7 @@
         <p>I also noticed that we have been out of touch lately, yea probably due to our own commitments, but I can see that our friendship is still there!! And i feel so bad for not being able to accompany you during treasure and dreamies concert. We’ve been looking forward to those moments, but i swear it breaks my heart that we haven’t been able to share them. Hopefully, later when i have my own salary, we will make up for it. We definitely gonna attend all those concerts together sampai bank aku pun merayu kat aku suruh stop 😂</p>
         <p>Also, i couldn’t thank you enough for everything you’ve done for me both small or big one!! 🫧 thank you for always be there in every chapters of my life. I pray that your mental health will keep on improving day by day to the point that you no longer afraid of what others would say about you 🤚🏼 live freely cause you’re the main character of your life!!  Also, thank you for being born and always listening to my stupid rants 😭🫶🏼 Thank you for providing me a safe space, for having my back and reaching out your hands when things are too tough for me to handle 🥺🫧 I swear you helped me a lot 🙌🏼 You also deserve all the comfort and convenience as you embark ok this new chapter of your life ❤️</p>
         <p>I wish you the best in everything you do, especially with your upcoming posting! 😊 I really hope you get posted dekat dengan rumah so you can be close to your loved ones and enjoy all the kemudahan dekat area tu. And, I believe that you’re going to be an amazing teacher!! Your students will be so lucky to have someone as caring, wise and dedicated as you ☀ i can already see the positive impact you’re going to make in their lives!! I hope you can be a teacher that students find peace whenever you’re around! And i know that you have so much to offer for your students 🤗 i know you have the ability to inspire them just like you’ve always done for me!!!</p>
-        <p>So, on this special day, i want you to celebrate yourself and all that you’ve accomplished!! I will always so proud of you in whatever you did!! You too have come so far, and there’s so much more greatness ahead of you!! 🥰 Do enjoy your day to the fullest, surrounded by those who love and appreciate you!! 😘🫧 inshaAllah, later kita jumpa okay!! Cuti sem aku panjang tau kalini, nanti kita set the date and day, kita keluar okies!! 😚🫶🏼 See you when i see you!! Love you 🫧</p>
+                <p>So, on this special day, i want you to celebrate yourself and all that you’ve accomplished!! I will always so proud of you in whatever you did!! You too have come so far, and there’s so much more greatness ahead of you!! 🥰 Do enjoy your day to the fullest, surrounded by those who love and appreciate you!! 😘🫧 inshaAllah, later kita jumpa okay!! Cuti sem aku panjang tau kalini, nanti kita set the date and day, kita keluar okies!! 😚🫶🏼 See you when i see you!! Love you 🫧</p>
     </div>
 
     <div class="section" id="videoSection">
@@ -248,7 +235,9 @@
             animateConfettiAndCakes();
             playBackgroundMusic();
         });
-
+        document.getElementById('confettiButton').addEventListener('click', function() {
+            confetti.start();
+        });
         // Pause background music when video starts playing
         birthdayVideo.addEventListener('play', () => {
             pauseBackgroundMusic();
